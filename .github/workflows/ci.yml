@@ -19,6 +19,7 @@ jobs:
         java-version: '18.0.2'
         distribution: 'adopt'
     - name: Build
-      run: cd GitHubActions
-           jar cfme Main.jar GitHubActions/Manifest.txt HelloWorld.Main HelloWorld/Main.class
-           java -jar Main.jar
+      run: |
+        cd GitHubActions
+        jar cfme Main.jar GitHubActions/Manifest.txt HelloWorld.Main HelloWorld/Main.class
+        java -jar Main.jar
